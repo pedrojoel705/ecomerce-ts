@@ -1,9 +1,12 @@
 'use client';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { lightTheme } from '@/themes';
 
 import { Navbar } from '../ui/Navbar';
-import { lightTheme } from '@/themes';
+import SideMenu from '../ui/SideMenu';
+
+
 
 const darkTheme = createTheme({
   palette: {
@@ -16,8 +19,9 @@ const ShopLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
 
-      {/* TODO: SliderBar */}
+
       <Navbar />
+      <SideMenu />
       <main
         style={{
           margin: '80px auto', // Corregido: coma a espacio
