@@ -14,7 +14,7 @@ import { SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
 
 export const Navbar = () => {
   return (
-    <AppBar>
+    <AppBar elevation={3}>
       <Toolbar>
         <NextLink href='/' passHref legacyBehavior>
           <Link display='flex' alignItems='center'>
