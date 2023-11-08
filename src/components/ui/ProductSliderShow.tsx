@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { FC } from 'react';
 import { Slide } from 'react-slideshow-image';
 
@@ -12,7 +12,7 @@ interface Props {
 
 const ProductSliderShow: FC<Props> = ({ images }) => {
     return (
-        <div className='slider-containe'>
+        <div className={styles['slider-container']}>
             <Slide easing='ease' duration={7000} indicators>
                 {images.map((image, index) => {
                     const url = `/products/${image}`;

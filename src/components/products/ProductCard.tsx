@@ -39,7 +39,7 @@ const ProductCard: FC<Props> = ({ product }) => {
             onMouseLeave={() => setIsHovered(false)}
         >
 
-            <Link href="/product/slug" passHref prefetch={false} >
+            <Link href="/product/slug" passHref prefetch={false} scroll={false}>
 
                 <Card>
 

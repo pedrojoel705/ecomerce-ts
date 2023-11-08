@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <AppBar elevation={3}>
       <Toolbar>
-        <NextLink href='/' passHref legacyBehavior>
+        <NextLink href='/' passHref legacyBehavior scroll={false}>
           <Link display='flex' alignItems='center'>
             <Typography variant='h6'>Teslo |</Typography>
             <Typography sx={{ ml: 0.5 }}>Shop</Typography>
@@ -49,7 +49,7 @@ export const Navbar = () => {
           <SearchOutlined />
         </IconButton>
 
-        <NextLink href='/cart' passHref legacyBehavior>
+        <NextLink href='/cart' passHref legacyBehavior scroll={false}>
           <Link>
             <IconButton>
               <Badge badgeContent={2} color='secondary'>

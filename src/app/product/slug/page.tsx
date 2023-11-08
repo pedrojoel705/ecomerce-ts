@@ -2,14 +2,18 @@ import ShopLayout from '@/components/layouts/ShopLayout';
 import { initialData } from '../../../../database/products';
 import { Grid, Box, Typography, Button, Chip } from '@mui/material';
 import ProductSliderShow from '@/components/ui/ProductSliderShow';
-import ItemCounter from '@/components/ui/itemCounter';
+import ItemCounter from '@/components/ui/ItemCounter';
+import SizeSelector from '@/components/products/SizeSelector';
 
-const { title, description, price, images } = initialData.products[0];
+const { title, description, price, images, sizes } = initialData.products[0];
 
 export function generateMetadata() {
     return {
+
+
         title: `${title}`,
         description: `${description}`,
+        images: '/img/logo.png'
     };
 }
 
@@ -30,7 +34,10 @@ const ProductPage = () => {
                             ${price}
                         </Typography>
 
-                        {/* Cantidad */}
+                        <SizeSelector
+                            sizes={sizes}
+                        // selectSizes={sizes[0]}
+                        />
 
                         <Box sx={{ my: 2 }}>
                             <Typography variant='subtitle2'>Cantidad</Typography>
